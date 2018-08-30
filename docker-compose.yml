@@ -1,8 +1,13 @@
 version: '2'
 
 services:
- nginx :
-   image: 'nginx:latest'
-   ports:
-   - "8080:80"
+  nginx :
+    image: 'nginx:latest'
+    ports:
+      - "8080:80"
+    volumes:
+        - ./code:/code
+        - ./site.conf:/etc/nginx/conf.d/site.conf
+
+   
 
